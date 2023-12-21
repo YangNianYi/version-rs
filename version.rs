@@ -92,7 +92,7 @@ async fn main() -> Result<()> {
     // axum will always exit gracefully first, because watch runs forever
     tokio::select! {
         _ = watch => warn!("watch exited"),
-       _ = server => info!("axum exited"),
+        _ = server => info!("axum exited"),
     };
     Ok(())
 }
